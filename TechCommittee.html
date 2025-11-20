@@ -84,7 +84,7 @@
             class="w-full h- object-cover"
           />
           <!-- Optional dark overlay for readability -->
-          <div class="absolute inset-0 "></div>
+          <div class="absolute inset-0"></div>
         </div>
 
         <!-- Navigation Bar -->
@@ -1073,6 +1073,7 @@
       </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="/script.js"></script>
     <script>
@@ -1085,7 +1086,13 @@
             lengthMenu: "Show _MENU_ entries",
           },
         });
+
+        // Initialize Lucide Icons HERE
+        lucide.createIcons();
       });
+
+      // AOS can stay outside since it initializes immediately
+      AOS.init();
     </script>
   </body>
 </html>
