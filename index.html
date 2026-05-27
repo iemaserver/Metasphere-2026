@@ -681,13 +681,17 @@
         <div id="video-slideshow" class="absolute top-0 left-0 w-full h-full z-0">
             <video autoplay loop muted
                 class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
-                <source src="https://res.cloudinary.com/dh87hfwml/video/upload/v1773308316/988047-hd_1280_720_60fps_qpcaxr.mp4" type="video/mp4" />
+                <source
+                    src="https://res.cloudinary.com/dh87hfwml/video/upload/v1773308316/988047-hd_1280_720_60fps_qpcaxr.mp4"
+                    type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
             <video autoplay loop muted
                 class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
-                <source src="https://res.cloudinary.com/dh87hfwml/video/upload/v1773308328/4200196-hd_1920_1080_30fps_pifowb.mp4" type="video/mp4" />
+                <source
+                    src="https://res.cloudinary.com/dh87hfwml/video/upload/v1773308328/4200196-hd_1920_1080_30fps_pifowb.mp4"
+                    type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -1089,16 +1093,17 @@
         </div>
     </section>
 
-    <div class="w-full max-w-4xl mx-auto p-4 flex flex-col sm:flex-row items-center justify-start gap-6 bg-transparent">
+    <div class="w-full max-w-4xl mx-auto p-4 flex flex-col sm:flex-row items-center justify-start gap-4 bg-transparent">
 
+        <!-- Compact container with explicit small widths and no forced aspect-ratio -->
         <div
-            class="flex-shrink-0 w-[160px] sm:w-[180px] aspect-[3/4] relative overflow-hidden rounded-lg shadow-md border border-gray-200 bg-white p-1 flex items-center justify-center">
-            <img src="/Assets/book.png" alt="Springer LNNS Book Cover"
-                class="max-w-full max-h-full object-contain" />
+            class="flex-shrink-0 w-40 sm:w-48 bg-white p-0.5 border border-gray-200 rounded shadow-sm flex items-center justify-center">
+            <!-- The image now 100% adapts directly to the width of this parent div -->
+            <img src="/Assets/book.png" alt="Springer LNNS Book Cover" class="w-full h-auto object-contain block" />
         </div>
 
         <div class="flex-grow text-center sm:text-left">
-            <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 tracking-tight leading-snug m-0">
+            <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 tracking-tight leading-snug m-0">
                 All accepted and presented papers will be published in Springer LNNS book series (Scopus Indexed)
             </h3>
         </div>
