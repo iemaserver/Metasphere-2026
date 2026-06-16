@@ -160,6 +160,7 @@ function toggleModal() {
   const modal = document.getElementById("trackModal");
 
   modal.classList.toggle("hidden");
+  modal.classList.toggle("flex");
   document.body.classList.toggle("overflow-hidden");
 }
 
@@ -172,4 +173,27 @@ window.onclick = function (event) {
 setupCarousel("heritage-carousel");
 setupSlideshow("background-slideshow", "img", 5000);
 setupSlideshow("video-slideshow", "video", 8000);
-// $ `npx @tailwindcss/cli -i ./Output.css -o ./Style.css --watch
+
+// --- Lazy-Load Background Videos ---
+function loadLazyVideos() {
+    const lazyVideos = document.querySelectorAll("video");
+    lazyVideos.forEach((video) => {
+        const sources = video.querySelectorAll("source[data-src]");
+        if (sources.length > 0) {
+            sources.forEach((source) => {
+                const dataSrc = source.getAttribute("data-src");
+                if (dataSrc) {
+                    source.src = dataSrc;
+                }
+            });
+            video.load();
+        }
+    });
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", loadLazyVideos);
+} else {
+    loadLazyVideos();
+}
+// $ `npx @tailwindcss/cli -i ./Output.css -o ./Style.css --watch`
