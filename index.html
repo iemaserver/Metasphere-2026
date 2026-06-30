@@ -4,13 +4,89 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="Style.css" />
+    
+    <!-- Primary SEO Metadata -->
     <title>MetaSphere 2026: Global Conference in Kolkata</title>
+    <meta name="description" content="MetaSphere 2026 is the premier international conference on Cloud Computing, Virtualization, and the Metaverse ecosystem, organized by the Department of Computer Application (BCA) and IEM Centre of Excellence, Kolkata, India." />
+    <meta name="keywords" content="MetaSphere 2026, Cloud Computing Conference, Virtualization, Metaverse, Quantum Metaverse, AI, Bidhannagar, Kolkata, IEM, Research Papers" />
+    <meta name="author" content="MetaSphere Conference Committee" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://metasphere-2026.web.app/index.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metasphere-2026.web.app/index.html" />
+    <meta property="og:title" content="MetaSphere 2026: Global Conference on Cloud, Virtualization & Metaverse" />
+    <meta property="og:description" content="Join leading researchers and industry experts at MetaSphere 2026, the global conference on Cloud Computing, Virtualization, and the Metaverse in Kolkata, India." />
+    <meta property="og:image" content="https://metasphere-2026.web.app/Assets/Logo.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://metasphere-2026.web.app/index.html" />
+    <meta name="twitter:title" content="MetaSphere 2026: Global Conference on Cloud, Virtualization & Metaverse" />
+    <meta name="twitter:description" content="Join leading researchers and industry experts at MetaSphere 2026, the global conference on Cloud Computing, Virtualization, and the Metaverse in Kolkata, India." />
+    <meta name="twitter:image" content="https://metasphere-2026.web.app/Assets/Logo.png" />
+
+    <!-- Favicon Configuration -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="Assets/Logo.svg" />
+    <link rel="apple-touch-icon" href="Assets/Logo.png" />
+
+    <!-- Stylesheets and Libraries -->
+    <link rel="stylesheet" href="Style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Schema.org JSON-LD Structured Data for Conference -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "MetaSphere 2026: Global Conference on Cloud Computing, Virtualization & Metaverse",
+      "startDate": "2026-08-21T09:00:00+05:30",
+      "endDate": "2026-08-22T18:00:00+05:30",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+      "location": [
+        {
+          "@type": "Place",
+          "name": "IEM Ashram Building",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "GN-34/2, Sector V, Bidhannagar",
+            "addressLocality": "Kolkata",
+            "addressRegion": "West Bengal",
+            "postalCode": "700091",
+            "addressCountry": "IN"
+          }
+        },
+        {
+          "@type": "VirtualLocation",
+          "url": "https://metasphere-2026.web.app"
+        }
+      ],
+      "image": [
+        "https://metasphere-2026.web.app/Assets/Logo.png"
+      ],
+      "description": "MetaSphere 2026 is a premier international forum bridging the future of Cloud, Virtualization, and the Metaverse. Featuring keynote speeches, technical sessions, and workshops.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Institute of Engineering & Management (IEM), Kolkata",
+        "url": "https://iem.edu.in"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://metasphere-2026.web.app/registration.html",
+        "price": "4000",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-02-01"
+      }
+    }
+    </script>
     <style>
         /* Base Styles */
         body {
@@ -678,18 +754,18 @@
     <!-- Hero Sec -->
     <section class="relative pt-10 pb-20 overflow-hidden">
         <div id="video-slideshow" class="absolute top-0 left-0 w-full h-full z-0">
-            <video autoplay loop muted
+            <video autoplay loop muted playsinline
                 class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
                 <source
-                    src="https://res.cloudinary.com/dh87hfwml/video/upload/v1773308316/988047-hd_1280_720_60fps_qpcaxr.mp4"
+                    data-src="https://res.cloudinary.com/dh87hfwml/video/upload/v1773308316/988047-hd_1280_720_60fps_qpcaxr.mp4"
                     type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
-            <video autoplay loop muted
+            <video autoplay loop muted playsinline
                 class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
                 <source
-                    src="https://res.cloudinary.com/dh87hfwml/video/upload/v1773308328/4200196-hd_1920_1080_30fps_pifowb.mp4"
+                    data-src="https://res.cloudinary.com/dh87hfwml/video/upload/v1773308328/4200196-hd_1920_1080_30fps_pifowb.mp4"
                     type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -788,9 +864,8 @@
                     </p>
                 </div>
             </div>
-            <!-- tracks popup -->
             <div id="trackModal"
-                class="fixed hidden inset-0 z-[100] flex items-start justify-center p-4 pt-28 backdrop-blur-sm">
+                class="fixed hidden inset-0 z-100 items-start justify-center p-4 pt-28 backdrop-blur-sm">
                 <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl flex flex-col"
                     style="height: 600px; max-height: 80vh">
                     <!-- Header - Fixed -->
@@ -1140,12 +1215,12 @@
 
         <!-- Compact container with explicit small widths and no forced aspect-ratio -->
         <div
-            class="flex-shrink-0 w-40 sm:w-48 bg-white p-0.5 border border-gray-200 rounded shadow-sm flex items-center justify-center">
+            class="shrink-0 w-40 sm:w-48 bg-white p-0.5 border border-gray-200 rounded shadow-sm flex items-center justify-center">
             <!-- The image now 100% adapts directly to the width of this parent div -->
             <img src="/Assets/book.png" alt="Springer LNNS Book Cover" class="w-full h-auto object-contain block" />
         </div>
 
-        <div class="flex-grow text-center sm:text-left">
+        <div class="grow text-center sm:text-left">
             <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 tracking-tight leading-snug m-0">
                 All accepted and presented papers will be published in Springer LNNS book series (Scopus Indexed)
             </h3>
