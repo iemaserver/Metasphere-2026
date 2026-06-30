@@ -27,9 +27,12 @@
     <meta name="twitter:image" content="https://metasphere-2026.web.app/Assets/Logo.png" />
 
     <!-- Favicon Configuration -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="icon" type="image/svg+xml" href="Assets/Logo.svg" />
-    <link rel="apple-touch-icon" href="Assets/Logo.png" />
+    <!-- Local Fallback: favicon.svg -->
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1782834947/MetaSphere2026/favicon.svg" />
+    <!-- Local Fallback: Assets/Logo.svg -->
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1782834942/MetaSphere2026/Logo.svg" />
+    <!-- Local Fallback: Assets/Logo.png -->
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1782834945/MetaSphere2026/Logo.png" />
 
     <!-- Stylesheets & Libraries -->
     <link rel="stylesheet" href="Style.css">
@@ -58,7 +61,8 @@
                 <!-- Banner Section -->
                 <div class="relative">
                     <img
-                        src="Assets/003.svg"
+                        <!-- Local Fallback: Assets/003.svg -- loading="lazy" decoding="async">
+                        src="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1782834938/MetaSphere2026/003.svg"
                         alt="Conference Banner"
                         class="w-full h- object-cover"
                     />
@@ -289,8 +293,9 @@
     
          <section class="relative pt-20  pb-20 sm:pt-60 sm:pb-24 overflow-hidden">
             <div id="video-slideshow" class="absolute top-0 left-0 w-full h-full z-0">
-                <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
-                    <source data-src="/Assets/7685212-hd_1920_1080_24fps.mp4" type="video/mp4">
+                <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100" preload="metadata">
+                    <!-- Local Fallback: Assets/7685212-hd_1920_1080_24fps.mp4 -->
+                    <source data-src="https://res.cloudinary.com/dh87hfwml/video/upload/f_auto,q_auto/v1782834899/MetaSphere2026/7685212-hd_1920_1080_24fps.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -411,11 +416,16 @@
                                     </ul>
                                 </div>
                                 <div class="bg-white p-6 rounded-lg border border-gray-200 flex flex-col items-center justify-center">
-                                    <h4 class="text-lg font-bold text-gray-900 mb-4">UPI Payment</h4>
-                                    <div class="w-40 h-40 bg-gray-100 rounded-md flex items-center justify-center text-gray-500 mb-2">
-                                        <span class="text-sm">QR Code Space</span>
+                                    <h4 class="text-lg font-bold text-gray-900 mb-1">UPI Payment</h4>
+                                    <p class="text-xs text-red-500 font-medium mb-3 text-center">QR Code Temporarily Inactive</p>
+                                    <div class="relative w-40 h-40 overflow-hidden rounded-md border border-gray-200 mb-3 select-none pointer-events-none">
+                                        <!-- Local Fallback: image.png -->
+                                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1782834952/MetaSphere2026/image.png" alt="UPI QR Code" class="w-full h-full object-cover" style="filter: blur(6px);" loading="lazy" decoding="async">
+                                        <div class="absolute inset-0 flex items-center justify-center bg-black/5">
+                                            <span class="text-xs font-semibold text-gray-700 bg-white/95 px-2 py-1 rounded shadow-sm border border-gray-100">Inactive</span>
+                                        </div>
                                     </div>
-                                    <p class="mt-2 font-semibold text-gray-800">UPI ID: iemt@iob</p>
+                                    <p class="mt-1 font-semibold text-gray-800">UPI ID: iemt@iob</p>
                                 </div>
                             </div>
                         </div>
