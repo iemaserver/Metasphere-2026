@@ -72,7 +72,7 @@
                         src="Assets/003.svg"
                         alt="Conference Banner"
                         class="w-full h- object-cover"
-                    />
+                    fetchpriority="high" />
                     <!-- Optional dark overlay for readability -->
                     <div class="absolute inset-0"></div>
                 </div>
@@ -309,7 +309,7 @@
                         muted
                         playsinline
                         class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
-                    >
+                     preload="metadata">
                         <source
                             data-src="/Assets/4198845-hd_1920_1080_25fps.mp4"
                             type="video/mp4"
@@ -631,11 +631,11 @@
 
         <script>
             // Initialize AOS
-            AOS.init();
+            if (typeof AOS !== 'undefined') { AOS.init(); }
 
             // Initialize Lucide Icons
             document.addEventListener("DOMContentLoaded", function () {
-                lucide.createIcons();
+                if (typeof lucide !== 'undefined') { lucide.createIcons(); }
             });
 
             // Dropdown Menu Logic

@@ -74,7 +74,7 @@
                         src="Assets/003.svg"
                         alt="Conference Banner"
                         class="w-full h- object-cover"
-                    />
+                    fetchpriority="high" />
                     <!-- Optional dark overlay for readability -->
                     <div class="absolute inset-0"></div>
                 </div>
@@ -333,7 +333,7 @@
                                 alt="Sponsor"
                                 class="w-32 h-32 object-contain rounded-2xl"
                                 loading="lazy"
-                            />
+                            / decoding="async">
                             <h1
                                 class="text-center text-lg font-bold text-gray-800 leading-tight"
                             >
@@ -349,7 +349,7 @@
                                 alt="Sponsor"
                                 class="w-32 h-32 object-contain rounded-2xl"
                                 loading="lazy"
-                            />
+                            / decoding="async">
                             <h1
                                 class="text-center text-lg font-bold text-gray-800 leading-tight"
                             >
@@ -365,7 +365,7 @@
                                 alt="Sponsor"
                                 class="w-32 h-32 object-contain rounded-2xl"
                                 loading="lazy"
-                            />
+                            / decoding="async">
                             <h1
                                 class="text-center text-lg font-bold text-gray-800 leading-tight"
                             >
@@ -381,7 +381,7 @@
                                 alt="Sponsor"
                                 class="w-32 h-32 object-contain rounded-2xl"
                                 loading="lazy"
-                            />
+                            / decoding="async">
                             <h1
                                 class="text-center text-lg font-bold text-gray-800 leading-tight"
                             >
@@ -396,7 +396,7 @@
                                 alt="Sponsor"
                                 class="w-32 h-32 object-contain rounded-2xl"
                                 loading="lazy"
-                            />
+                            / decoding="async">
                             <h1
                                 class="text-center text-lg font-bold text-gray-800 leading-tight"
                             >
@@ -664,29 +664,31 @@
         </div>
 
         <script>
+        document.addEventListener("DOMContentLoaded", () => {
             // Initialize Lucide Icons
-            lucide.createIcons();
-            AOS.init();
-            // Dropdown Menu Logic
-            function toggleDropdown(id) {
-                const dropdown = document.getElementById(id);
-                const isHidden = dropdown.classList.contains("hidden");
-                document
-                    .querySelectorAll("nav .absolute")
-                    .forEach((el) => el.classList.add("hidden"));
-                if (isHidden) {
-                    dropdown.classList.remove("hidden");
-                }
-            }
-            document.addEventListener("click", function (event) {
-                const nav = document.querySelector("nav");
-                if (nav && !nav.contains(event.target)) {
-                    document
-                        .querySelectorAll("nav .absolute")
-                        .forEach((el) => el.classList.add("hidden"));
-                }
-            });
-        </script>
+                        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+                        if (typeof AOS !== 'undefined') { AOS.init(); }
+                        // Dropdown Menu Logic
+                        function toggleDropdown(id) {
+                            const dropdown = document.getElementById(id);
+                            const isHidden = dropdown.classList.contains("hidden");
+                            document
+                                .querySelectorAll("nav .absolute")
+                                .forEach((el) => el.classList.add("hidden"));
+                            if (isHidden) {
+                                dropdown.classList.remove("hidden");
+                            }
+                        }
+                        document.addEventListener("click", function (event) {
+                            const nav = document.querySelector("nav");
+                            if (nav && !nav.contains(event.target)) {
+                                document
+                                    .querySelectorAll("nav .absolute")
+                                    .forEach((el) => el.classList.add("hidden"));
+                            }
+                        });
+        });
+    </script>
         <script src="script.js"></script>
     </body>
 </html>

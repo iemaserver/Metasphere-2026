@@ -89,7 +89,7 @@
                     src="Assets/003.svg"
                     alt="Conference Banner"
                     class="w-full h- object-cover"
-                />
+                fetchpriority="high" />
                 <!-- Optional dark overlay for readability -->
                 <div class="absolute inset-0"></div>
             </div>
@@ -315,7 +315,7 @@
                         muted
                         playsinline
                         class="absolute top-0 left-0 w-full h-full object-cover"
-                    >
+                     preload="metadata">
                         <source data-src="/Assets/Paper.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
@@ -910,48 +910,50 @@
         </footer>
         <script src="script.js"></script>
         <script>
-            AOS.init({
-                duration: 800,
-                once: true,
-            });
-
-            lucide.createIcons();
-
-            // --- SCRIPT FOR FUNCTIONALITY ---
-
-            function toggleDropdown(id) {
-                const dropdown = document.getElementById(id);
-                const isHidden = dropdown.classList.contains("hidden");
-                document
-                    .querySelectorAll("nav .absolute")
-                    .forEach((el) => el.classList.add("hidden"));
-                if (isHidden) {
-                    dropdown.classList.remove("hidden");
-                }
-            }
-
-            function toggleMobileMenu() {
-                const menu = document.getElementById("mobileMenu");
-                menu.classList.toggle("hidden");
-            }
-
-            // Close dropdowns when clicking outside
-            document.addEventListener("click", function (event) {
-                const nav = document.querySelector("header nav");
-                const isDropdownButton =
-                    event.target.closest("button") &&
-                    (
-                        event.target
-                            .closest("button")
-                            .getAttribute("onclick") || ""
-                    ).includes("toggleDropdown");
-
-                if (nav && !nav.contains(event.target) && !isDropdownButton) {
-                    document
-                        .querySelectorAll("nav .absolute")
-                        .forEach((el) => el.classList.add("hidden"));
-                }
-            });
-        </script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof AOS !== 'undefined') { AOS.init({
+                            duration: 800,
+                            once: true,
+                        }); }
+            
+                        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+            
+                        // --- SCRIPT FOR FUNCTIONALITY ---
+            
+                        function toggleDropdown(id) {
+                            const dropdown = document.getElementById(id);
+                            const isHidden = dropdown.classList.contains("hidden");
+                            document
+                                .querySelectorAll("nav .absolute")
+                                .forEach((el) => el.classList.add("hidden"));
+                            if (isHidden) {
+                                dropdown.classList.remove("hidden");
+                            }
+                        }
+            
+                        function toggleMobileMenu() {
+                            const menu = document.getElementById("mobileMenu");
+                            menu.classList.toggle("hidden");
+                        }
+            
+                        // Close dropdowns when clicking outside
+                        document.addEventListener("click", function (event) {
+                            const nav = document.querySelector("header nav");
+                            const isDropdownButton =
+                                event.target.closest("button") &&
+                                (
+                                    event.target
+                                        .closest("button")
+                                        .getAttribute("onclick") || ""
+                                ).includes("toggleDropdown");
+            
+                            if (nav && !nav.contains(event.target) && !isDropdownButton) {
+                                document
+                                    .querySelectorAll("nav .absolute")
+                                    .forEach((el) => el.classList.add("hidden"));
+                            }
+                        });
+        });
+    </script>
     </body>
 </html>

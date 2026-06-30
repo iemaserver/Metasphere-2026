@@ -131,7 +131,7 @@
                         src="Assets/003.svg"
                         alt="Conference Banner"
                         class="w-full h- object-cover"
-                    />
+                    fetchpriority="high" />
                     <!-- Optional dark overlay for readability -->
                     <div class="absolute inset-0"></div>
                 </div>
@@ -369,7 +369,7 @@
                         muted
                         playsinline
                         class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
-                    >
+                     preload="metadata">
                         <source
                             data-src="/Assets/20784261-hd_1280_720_30fps.mp4"
                             type="video/mp4"
@@ -1134,7 +1134,7 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             // Initialize Lucide Icons
-            lucide.createIcons();
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
             // Initialize DataTables
             $(document).ready(function () {
                 $("#committeeTable").DataTable({
@@ -1149,6 +1149,8 @@
         </script>
     </body>
     <script>
-        AOS.init();
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof AOS !== 'undefined') { AOS.init(); }
+        });
     </script>
 </html>

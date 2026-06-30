@@ -648,7 +648,7 @@
     <header class="top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg shadow-md relative">
         <!-- Banner Section -->
         <div class="relative">
-            <img src="Assets/003.svg" alt="Conference Banner" class="w-full h- object-cover" />
+            <img src="Assets/003.svg" alt="Conference Banner" class="w-full h- object-cover" fetchpriority="high" />
             <!-- Optional dark overlay for readability -->
             <div class="absolute inset-0"></div>
         </div>
@@ -755,17 +755,17 @@
     <section class="relative pt-10 pb-20 overflow-hidden">
         <div id="video-slideshow" class="absolute top-0 left-0 w-full h-full z-0">
             <video autoplay loop muted playsinline
-                class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
+                class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100" preload="metadata">
                 <source
-                    data-src="https://res.cloudinary.com/dh87hfwml/video/upload/v1773308316/988047-hd_1280_720_60fps_qpcaxr.mp4"
+                    data-src="https://res.cloudinary.com/dh87hfwml/video/upload/f_auto,q_auto/v1773308316/988047-hd_1280_720_60fps_qpcaxr.mp4"
                     type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
             <video autoplay loop muted playsinline
-                class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
+                class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0" preload="metadata">
                 <source
-                    data-src="https://res.cloudinary.com/dh87hfwml/video/upload/v1773308328/4200196-hd_1920_1080_30fps_pifowb.mp4"
+                    data-src="https://res.cloudinary.com/dh87hfwml/video/upload/f_auto,q_auto/v1773308328/4200196-hd_1920_1080_30fps_pifowb.mp4"
                     type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -1039,16 +1039,16 @@
                 <div class="lg:col-span-2 grid md:grid-cols-2 gap-8 items-start">
                     <div class="w-full relative overflow-hidden rounded-xl shadow-lg">
                         <div id="tech-carousel" class="relative w-full h-80 overflow-hidden">
-                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1773308334/AI_pc7whl.webp"
-                                class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" />
-                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1773308337/Cloud_pxqt8h.avif"
-                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1773308344/Data-Visualization-thumbnail_op7lu3.jpg"
-                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1773308265/Quantum_t5wikm.jpg"
-                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1773308267/iem2_zzp4it.jpg"
-                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1773308334/AI_pc7whl.webp"
+                                class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1773308337/Cloud_pxqt8h.avif"
+                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1773308344/Data-Visualization-thumbnail_op7lu3.jpg"
+                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1773308265/Quantum_t5wikm.jpg"
+                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1773308267/iem2_zzp4it.jpg"
+                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         </div>
                     </div>
 
@@ -1217,7 +1217,7 @@
         <div
             class="shrink-0 w-40 sm:w-48 bg-white p-0.5 border border-gray-200 rounded shadow-sm flex items-center justify-center">
             <!-- The image now 100% adapts directly to the width of this parent div -->
-            <img src="/Assets/book.png" alt="Springer LNNS Book Cover" class="w-full h-auto object-contain block" />
+            <img src="/Assets/book.png" alt="Springer LNNS Book Cover" class="w-full h-auto object-contain block" / loading="lazy" decoding="async">
         </div>
 
         <div class="grow text-center sm:text-left">
@@ -1247,39 +1247,234 @@
                 <!-- Carousel -->
                 <div class="w-full relative overflow-hidden rounded-xl shadow-lg">
                     <div id="iem-carousel" class="relative w-full h-80 overflow-hidden">
-                        <!-- <img src="/Assets/iem.webp" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" /> -->
+                        <!-- <img src="/Assets/iem.webp" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" / loading="lazy" decoding="async"> -->
                         <img src="/Assets/iem2.jpeg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <img src="/Assets/Events/IMG_5134.JPG"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <!-- <img src="/Assets/Events/IMG_5671.JPG"
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" /> -->
+              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async"> -->
                         <img src="/Assets/Events/IMG-20250306-WA0075.jpg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <!-- <img src="/Assets/Developers/src.jpeg"
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" /> -->
+              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async"> -->
                         <img src="/Assets/Events/IMG_5520.JPG"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <img src="/Assets/Events/IMG_5171.JPG"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <img src="/Assets/Events/DSC01429.JPG.jpeg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <img src="/Assets/Events/IMG_5359.JPG"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <img src="/Assets/Events/recent2.jpeg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <img src="/Assets/Events/recent3.jpeg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <img src="/Assets/Events/IMG_5616.JPG"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <img src="/Assets/Events/IMG-20250306-WA0079.jpg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <img src="/Assets/Events/IMG-20250306-WA0090.jpg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <img src="/Assets/Events/IMG-20250306-WA0102.jpg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <img src="/Assets/Events/recent1.jpeg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                    </div>
+                </div>
+
+                <!-- About Text -->
+                <div class="space-y-6 text-gray-700">
+                    <h3 class="text-2xl font-semibold text-gray-900">
+                        IEM Overview
+                    </h3>
+                    <p style="text-align: justify">
+                        The IEM group is an acclaimed educational group amongst the industry-centred academic training
+                        organisations of today. IEM has set sublime standards in addressing the technical and managerial
+                        resource shortage in the new era of dynamic globalisation. The IEM group has risen to fame for
+                        its strong foundation in teaching and R&D in multifaceted areas. It aims to serve the future
+                        generation as well as the Nation through its commitment towards self-sufficiency and unmatchable
+                        excellence. IEM is one of the top-ranked engineering colleges in Kolkata and Eastern India which
+                        provides the best engineering course with 100% job assistance. Contact today to know the course
+                        details of computer science engineering, mechanical engineering, electrical and electronics
+                        engineering, electronics and communication engineering.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li style="text-align: justify">
+                            Ranked ‘A’ Category by NAAC (National Assessment
+                            and Accreditation Council)
+                        </li>
+                        <li style="text-align: justify">
+                            Winner of the “Jewel of the East” title by
+                            Telegraph
+                        </li>
+                        <li style="text-align: justify">
+                            Ranked 3rd best engineering college in West
+                            Bengal by NIRF, Ministry of HRD, Govt of India,
+                            and 79th all over India
+                        </li>
+                        <li style="text-align: justify">
+                            Awarded “Picture Perfect” by ABP Group
+                        </li>
+                        <li style="text-align: justify">
+                            Achieved Best Institute of India in Star News
+                            Award
+                        </li>
+                        <li style="text-align: justify">
+                            Strong placement record: 1-2 job offers on
+                            average for every student since inception
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracks -->
+    <!-- Tracks -->
+
+    <!-- devloper removed -->
+
+    <!-- footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="md:col-span-2 lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4 border-b-2 border-b-white">
+                        <span class="text-2xl font-bold text-white">MetaSphere 2026</span>
+                    </div>
+                    <p style="text-align: justify" class="text-sm text-gray-400 max-w-lg">
+                        MetaSphere 2026 is the premier global conference
+                        bridging the future of Cloud, Virtualization, and
+                        the Metaverse. We are dedicated to fostering
+                        innovation, connecting experts, and exploring the
+                        next digital frontier, all from the cultural heart
+                        of Kolkata.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">
+                        Quick Links
+                    </h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="index.html" class="hover:text-orange-400 transition-colors">Home</a>
+                        </li>
+                        <li>
+                            <a href="CallPapers.html" class="hover:text-orange-400 transition-colors">Call For
+                                Papers</a>
+                        </li>
+                        <li>
+                            <a href="/scientific-committee.html"
+                                class="hover:text-orange-400 transition-colors">Scientific Committee</a>
+                        </li>
+                        <li>
+                            <a href="/AdvisoryCommittee.html" class="hover:text-orange-400 transition-colors">Advisory
+                                Committee</a>
+                        </li>
+                        <li>
+                            <a href="/TechCommittee.html" class="hover:text-orange-400 transition-colors">Technical
+                                Program Committee</a>
+                        </li>
+                        <li>
+                            <a href="/Keynote_Speaker.html" class="hover:text-orange-400 transition-colors">Keynote
+                                Speakers</a>
+                        </li>
+                        <li>
+                            <a href="/registration.html"
+                                class="hover:text-orange-400 transition-colors">Registration</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold text-white mb-4">
+                        Contact & Venue
+                    </h4>
+                    <div class="text-sm space-y-2">
+                        <p class="font-bold">IEM Ashram Building</p>
+                        <p class="text-gray-400">
+                            GN-34/2, Sector V, Bidhannagar, Kolkata, West
+                            Bengal 700091
+                        </p>
+                        <a href="mailto:metaSphere2026@iem.edu.in"
+                            class="block hover:text-orange-400 transition-colors pt-2">metaSphere2026@iem.edu.in</a>
+                         <a href="tel:+918981774023" class="block hover:text-orange-400 transition-colors">+91 898 177 4023</a>
+                    </div>
+                    <div class="mt-4 rounded-lg overflow-hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.123456789!2d88.4296927!3d22.5701392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275b23d77ee27%3A0xcd498ec0d7bf6f54!2sInstitute%20of%20Engineering%20and%20Management%20(Ashram%20Building)!5e0!3m2!1sen!2sin!4v1690000000000"
+                            width="100%" height="150" style="border: 0" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+class="shrink-0 w-40 sm:w-48 bg-white p-0.5 border border-gray-200 rounded shadow-sm flex items-center justify-center">
+            <!-- The image now 100% adapts directly to the width of this parent div -->
+            <img src="/Assets/book.png" alt="Springer LNNS Book Cover" class="w-full h-auto object-contain block" / loading="lazy" decoding="async">
+        </div>
+
+        <div class="grow text-center sm:text-left">
+            <h3 class="text-base sm:text-lg md:text-xl font-semibold text-gray-900 tracking-tight leading-snug m-0">
+                All accepted and presented papers will be published in Springer LNNS book series (Scopus Indexed)
+            </h3>
+        </div>
+
+    </div>
+
+    <!-- About IEM -->
+    <section id="about-iem" data-aos="fade-up" data-aos-duration="2000" class="py-20 md:py-28 bg-white/40">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    About IEM
+                </h2>
+                <p style="text-align: justify" class="text-gray-700 text-lg max-w-4xl">
+                    The IEM group is an acclaimed educational group amongst
+                    industry-centred academic training organisations,
+                    setting high standards in technical and managerial
+                    education while focusing on research and development.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Carousel -->
+                <div class="w-full relative overflow-hidden rounded-xl shadow-lg">
+                    <div id="iem-carousel" class="relative w-full h-80 overflow-hidden">
+                        <!-- <img src="/Assets/iem.webp" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" / loading="lazy" decoding="async"> -->
+                        <img src="/Assets/iem2.jpeg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="/Assets/Events/IMG_5134.JPG"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <!-- <img src="/Assets/Events/IMG_5671.JPG"
+              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async"> -->
+                        <img src="/Assets/Events/IMG-20250306-WA0075.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <!-- <img src="/Assets/Developers/src.jpeg"
+              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async"> -->
+                        <img src="/Assets/Events/IMG_5520.JPG"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="/Assets/Events/IMG_5171.JPG"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="/Assets/Events/DSC01429.JPG.jpeg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="/Assets/Events/IMG_5359.JPG"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="/Assets/Events/recent2.jpeg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="/Assets/Events/recent3.jpeg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="/Assets/Events/IMG_5616.JPG"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="/Assets/Events/IMG-20250306-WA0079.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="/Assets/Events/IMG-20250306-WA0090.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="/Assets/Events/IMG-20250306-WA0102.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="/Assets/Events/recent1.jpeg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -1421,22 +1616,21 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
-        AOS.init();
-        // --- LOADER SCRIPT ---
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof AOS !== 'undefined') { AOS.init(); }
+        });
+
         window.addEventListener("load", () => {
             const loader = document.getElementById("loader-container");
-
             setTimeout(() => {
                 if (loader) {
                     loader.classList.add("hidden");
                 }
-
                 document.body.style.overflowY = "auto";
             }, 300);
-
             setTimeout(() => {
                 if (loader) {
                     loader.remove();
