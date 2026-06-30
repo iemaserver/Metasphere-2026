@@ -9,9 +9,12 @@
         <meta name="robots" content="noindex, nofollow" />
 
         <!-- Favicon Configuration -->
-        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-        <link rel="icon" type="image/svg+xml" href="Assets/Logo.svg" />
-        <link rel="apple-touch-icon" href="Assets/Logo.png" />
+        <!-- Local Fallback: favicon.svg -->
+        <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1782834947/MetaSphere2026/favicon.svg" />
+        <!-- Local Fallback: Assets/Logo.svg -->
+        <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1782834942/MetaSphere2026/Logo.svg" />
+        <!-- Local Fallback: Assets/Logo.png -->
+        <link rel="apple-touch-icon" href="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1782834945/MetaSphere2026/Logo.png" />
 
         <!-- Stylesheets and Fonts -->
         <link rel="stylesheet" href="Style.css" />
@@ -44,7 +47,8 @@
                 <!-- Banner Section -->
                 <div class="relative">
                     <img
-                        src="Assets/003.svg"
+                        <!-- Local Fallback: Assets/003.svg -- loading="lazy" decoding="async">
+                        src="https://res.cloudinary.com/dh87hfwml/image/upload/f_auto,q_auto/v1782834938/MetaSphere2026/003.svg"
                         alt="Conference Banner"
                         class="w-full h- object-cover"
                     />
