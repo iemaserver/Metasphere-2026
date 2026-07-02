@@ -116,7 +116,7 @@
                         src="Assets/003.svg"
                         alt="Conference Banner"
                         class="w-full h- object-cover"
-                    />
+                    fetchpriority="high" />
                     <!-- Optional dark overlay for readability -->
                     <div class="absolute inset-0"></div>
                 </div>
@@ -652,29 +652,31 @@
         </div>
 
         <script>
+        document.addEventListener("DOMContentLoaded", () => {
             // Initialize Lucide Icons
-            lucide.createIcons();
-            AOS.init();
-            // Dropdown Menu Logic
-            function toggleDropdown(id) {
-                const dropdown = document.getElementById(id);
-                const isHidden = dropdown.classList.contains("hidden");
-                document
-                    .querySelectorAll("nav .absolute")
-                    .forEach((el) => el.classList.add("hidden"));
-                if (isHidden) {
-                    dropdown.classList.remove("hidden");
-                }
-            }
-            document.addEventListener("click", function (event) {
-                const nav = document.querySelector("nav");
-                if (nav && !nav.contains(event.target)) {
-                    document
-                        .querySelectorAll("nav .absolute")
-                        .forEach((el) => el.classList.add("hidden"));
-                }
-            });
-        </script>
+                        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+                        if (typeof AOS !== 'undefined') { AOS.init(); }
+                        // Dropdown Menu Logic
+                        function toggleDropdown(id) {
+                            const dropdown = document.getElementById(id);
+                            const isHidden = dropdown.classList.contains("hidden");
+                            document
+                                .querySelectorAll("nav .absolute")
+                                .forEach((el) => el.classList.add("hidden"));
+                            if (isHidden) {
+                                dropdown.classList.remove("hidden");
+                            }
+                        }
+                        document.addEventListener("click", function (event) {
+                            const nav = document.querySelector("nav");
+                            if (nav && !nav.contains(event.target)) {
+                                document
+                                    .querySelectorAll("nav .absolute")
+                                    .forEach((el) => el.classList.add("hidden"));
+                            }
+                        });
+        });
+    </script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
         <script src="script.js"></script>

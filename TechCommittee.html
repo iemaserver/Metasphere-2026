@@ -109,7 +109,7 @@
                         src="Assets/003.svg"
                         alt="Conference Banner"
                         class="w-full h- object-cover"
-                    />
+                    fetchpriority="high" />
                     <!-- Optional dark overlay for readability -->
                     <div class="absolute inset-0"></div>
                 </div>
@@ -347,8 +347,8 @@
                         muted
                         playsinline
                         class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100"
-                    >
-                        <source data-src="Assets/MB.mp4" type="video/mp4" />
+                     preload="metadata">
+                        <source data-src="https://res.cloudinary.com/dh87hfwml/video/upload/v1782834921/MetaSphere2026/MB.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -1201,11 +1201,11 @@
                 });
 
                 // Initialize Lucide Icons HERE
-                lucide.createIcons();
+                if (typeof lucide !== 'undefined') { lucide.createIcons(); }
             });
 
             // AOS can stay outside since it initializes immediately
-            AOS.init();
+            if (typeof AOS !== 'undefined') { AOS.init(); }
         </script>
     </body>
 </html>

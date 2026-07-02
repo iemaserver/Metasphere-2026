@@ -61,7 +61,7 @@
                         src="Assets/003.svg"
                         alt="Conference Banner"
                         class="w-full h- object-cover"
-                    />
+                    fetchpriority="high" />
                     <!-- Optional dark overlay for readability -->
                     <div class="absolute inset-0"></div>
                 </div>
@@ -289,8 +289,8 @@
     
          <section class="relative pt-20  pb-20 sm:pt-60 sm:pb-24 overflow-hidden">
             <div id="video-slideshow" class="absolute top-0 left-0 w-full h-full z-0">
-                <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
-                    <source data-src="/Assets/7685212-hd_1920_1080_24fps.mp4" type="video/mp4">
+                <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100" preload="metadata">
+                    <source data-src="https://res.cloudinary.com/dh87hfwml/video/upload/v1782834899/MetaSphere2026/7685212-hd_1920_1080_24fps.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -412,8 +412,13 @@
                                 </div>
                                 <div class="bg-white p-6 rounded-lg border border-gray-200 flex flex-col items-center justify-center">
                                     <h4 class="text-lg font-bold text-gray-900 mb-4">UPI Payment</h4>
-                                    <div class="w-40 h-40 bg-gray-100 rounded-md flex items-center justify-center text-gray-500 mb-2">
-                                        <span class="text-sm">QR Code Space</span>
+                                    <div class="relative w-40 h-40 bg-gray-100 rounded-md overflow-hidden mb-2 shadow-inner border border-gray-200">
+                                        <!-- Blurred QR Code Image -->
+                                        <img src="Assets/qr-code.png" alt="UPI QR Code" class="w-full h-full object-cover select-none pointer-events-none" style="filter: blur(5px); transform: scale(1.05);">
+                                        <!-- Overlay Text -->
+                                        <div class="absolute inset-0 flex items-center justify-center bg-black/45 backdrop-blur-[1px]">
+                                            <span class="text-white font-bold text-xs uppercase tracking-wider bg-black/60 px-3 py-1.5 rounded shadow-sm border border-white/10 select-none">Coming Soon</span>
+                                        </div>
                                     </div>
                                     <p class="mt-2 font-semibold text-gray-800">UPI ID: iemt@iob</p>
                                 </div>
@@ -594,8 +599,10 @@
 
 <script src="script.js"></script>
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+        document.addEventListener("DOMContentLoaded", () => {
+            // Initialize Lucide Icons
+                    if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+        });
     </script>
 </body>
 </html>

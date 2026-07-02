@@ -648,7 +648,7 @@
     <header class="top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg shadow-md relative">
         <!-- Banner Section -->
         <div class="relative">
-            <img src="Assets/003.svg" alt="Conference Banner" class="w-full h- object-cover" />
+            <img src="Assets/003.svg" alt="Conference Banner" class="w-full h- object-cover" fetchpriority="high" />
             <!-- Optional dark overlay for readability -->
             <div class="absolute inset-0"></div>
         </div>
@@ -755,17 +755,17 @@
     <section class="relative pt-10 pb-20 overflow-hidden">
         <div id="video-slideshow" class="absolute top-0 left-0 w-full h-full z-0">
             <video autoplay loop muted playsinline
-                class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
+                class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100" preload="metadata">
                 <source
-                    data-src="https://res.cloudinary.com/dh87hfwml/video/upload/v1773308316/988047-hd_1280_720_60fps_qpcaxr.mp4"
+                    data-src="https://res.cloudinary.com/dh87hfwml/video/upload/f_auto,q_auto/v1782834872/MetaSphere2026/988047-hd_1280_720_60fps.mp4"
                     type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
             <video autoplay loop muted playsinline
-                class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
+                class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0" preload="metadata">
                 <source
-                    data-src="https://res.cloudinary.com/dh87hfwml/video/upload/v1773308328/4200196-hd_1920_1080_30fps_pifowb.mp4"
+                    data-src="https://res.cloudinary.com/dh87hfwml/video/upload/f_auto,q_auto/v1782834913/MetaSphere2026/4200196-hd_1920_1080_30fps.mp4"
                     type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -1039,16 +1039,16 @@
                 <div class="lg:col-span-2 grid md:grid-cols-2 gap-8 items-start">
                     <div class="w-full relative overflow-hidden rounded-xl shadow-lg">
                         <div id="tech-carousel" class="relative w-full h-80 overflow-hidden">
-                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1773308334/AI_pc7whl.webp"
-                                class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" />
-                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1773308337/Cloud_pxqt8h.avif"
-                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1773308344/Data-Visualization-thumbnail_op7lu3.jpg"
-                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1773308265/Quantum_t5wikm.jpg"
-                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1773308267/iem2_zzp4it.jpg"
-                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782834955/MetaSphere2026/Data-Visualization-thumbnail.jpg"
+                                class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782834956/MetaSphere2026/Quantum.jpg"
+                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782834954/MetaSphere2026/AI.webp"
+                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782834955/MetaSphere2026/Cloud.avif"
+                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                            <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782834955/MetaSphere2026/Cloud.avif"
+                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         </div>
                     </div>
 
@@ -1217,7 +1217,7 @@
         <div
             class="shrink-0 w-40 sm:w-48 bg-white p-0.5 border border-gray-200 rounded shadow-sm flex items-center justify-center">
             <!-- The image now 100% adapts directly to the width of this parent div -->
-            <img src="/Assets/book.png" alt="Springer LNNS Book Cover" class="w-full h-auto object-contain block" />
+            <img src="/Assets/book.png" alt="Springer LNNS Book Cover" class="w-full h-auto object-contain block" / loading="lazy" decoding="async">
         </div>
 
         <div class="grow text-center sm:text-left">
@@ -1247,39 +1247,39 @@
                 <!-- Carousel -->
                 <div class="w-full relative overflow-hidden rounded-xl shadow-lg">
                     <div id="iem-carousel" class="relative w-full h-80 overflow-hidden">
-                        <!-- <img src="/Assets/iem.webp" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" /> -->
-                        <img src="/Assets/iem2.jpeg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                        <img src="/Assets/Events/IMG_5134.JPG"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+                        <!-- <img src="/Assets/iem.webp" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" / loading="lazy" decoding="async"> -->
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782833928/iem2_b92xeg.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782833993/IMG_5134_swdqrc.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <!-- <img src="/Assets/Events/IMG_5671.JPG"
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" /> -->
-                        <img src="/Assets/Events/IMG-20250306-WA0075.jpg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async"> -->
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782835043/MetaSphere2026/Events/IMG-20250306-WA0102.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                         <!-- <img src="/Assets/Developers/src.jpeg"
-              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" /> -->
-                        <img src="/Assets/Events/IMG_5520.JPG"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                        <img src="/Assets/Events/IMG_5171.JPG"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                        <img src="/Assets/Events/DSC01429.JPG.jpeg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                        <img src="/Assets/Events/IMG_5359.JPG"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                        <img src="/Assets/Events/recent2.jpeg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                        <img src="/Assets/Events/recent3.jpeg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                        <img src="/Assets/Events/IMG_5616.JPG"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                        <img src="/Assets/Events/IMG-20250306-WA0079.jpg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                        <img src="/Assets/Events/IMG-20250306-WA0090.jpg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                        <img src="/Assets/Events/IMG-20250306-WA0102.jpg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
-                        <img src="/Assets/Events/recent1.jpeg"
-                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async"> -->
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782835130/MetaSphere2026/Events/IMG_5520.JPG.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782835126/MetaSphere2026/Events/IMG_5171.JPG.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782835036/MetaSphere2026/Events/DSC01429.JPG.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782835136/MetaSphere2026/Events/IMG_5359.JPG.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782835038/MetaSphere2026/Events/recent2.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782835038/MetaSphere2026/Events/recent3.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782835134/MetaSphere2026/Events/IMG_5616.JPG.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782835040/MetaSphere2026/Events/IMG-20250306-WA0079.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782835042/MetaSphere2026/Events/IMG-20250306-WA0090.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782835040/MetaSphere2026/Events/IMG-20250306-WA0079.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
+                        <img src="https://res.cloudinary.com/dh87hfwml/image/upload/v1782835037/MetaSphere2026/Events/recent1.jpg"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" / loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -1410,33 +1410,26 @@
                         </iframe>
                     </div>
                 </div>
-            </div>
+            <!-- The image now 100% adapts directly to the width of this parent div -->
+          
 
-            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-                <p class="text-sm text-gray-400">
-                    &copy; 2026 MetaSphere Conference Committee. All Rights
-                    Reserved.
-                </p>
-            </div>
-        </div>
-    </footer>
+    
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="script.js" defer></script>
     <script>
-        AOS.init();
-        // --- LOADER SCRIPT ---
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof AOS !== 'undefined') { AOS.init(); }
+        });
+
         window.addEventListener("load", () => {
             const loader = document.getElementById("loader-container");
-
             setTimeout(() => {
                 if (loader) {
                     loader.classList.add("hidden");
                 }
-
                 document.body.style.overflowY = "auto";
             }, 300);
-
             setTimeout(() => {
                 if (loader) {
                     loader.remove();
