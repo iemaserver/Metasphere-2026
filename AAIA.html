@@ -3,28 +3,55 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
+
         <!-- Primary SEO Metadata -->
         <title>AAIA Committee | MetaSphere 2026</title>
-        <meta name="description" content="Discover the members of the Asia-Pacific Artificial Intelligence Association (AAIA) Committee collaborating with MetaSphere 2026." />
-        <meta name="keywords" content="MetaSphere 2026, AAIA Committee, Artificial Intelligence Committee, IEM, Kolkata, Asia-Pacific Artificial Intelligence Association" />
+        <meta
+            name="description"
+            content="Discover the members of the Asia-Pacific Artificial Intelligence Association (AAIA) Committee collaborating with MetaSphere 2026."
+        />
+        <meta
+            name="keywords"
+            content="MetaSphere 2026, AAIA Committee, Artificial Intelligence Committee, IEM, Kolkata, Asia-Pacific Artificial Intelligence Association"
+        />
         <meta name="author" content="MetaSphere Conference Committee" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://metasphere-2026.web.app/AAIA.html" />
+        <link
+            rel="canonical"
+            href="https://metasphere-2026.web.app/AAIA.html"
+        />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://metasphere-2026.web.app/AAIA.html" />
+        <meta
+            property="og:url"
+            content="https://metasphere-2026.web.app/AAIA.html"
+        />
         <meta property="og:title" content="AAIA Committee | MetaSphere 2026" />
-        <meta property="og:description" content="Discover the members of the Asia-Pacific Artificial Intelligence Association (AAIA) Committee collaborating with MetaSphere 2026." />
-        <meta property="og:image" content="https://metasphere-2026.web.app/Assets/Logo.png" />
+        <meta
+            property="og:description"
+            content="Discover the members of the Asia-Pacific Artificial Intelligence Association (AAIA) Committee collaborating with MetaSphere 2026."
+        />
+        <meta
+            property="og:image"
+            content="https://metasphere-2026.web.app/Assets/Logo.png"
+        />
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://metasphere-2026.web.app/AAIA.html" />
+        <meta
+            name="twitter:url"
+            content="https://metasphere-2026.web.app/AAIA.html"
+        />
         <meta name="twitter:title" content="AAIA Committee | MetaSphere 2026" />
-        <meta name="twitter:description" content="Discover the members of the Asia-Pacific Artificial Intelligence Association (AAIA) Committee collaborating with MetaSphere 2026." />
-        <meta name="twitter:image" content="https://metasphere-2026.web.app/Assets/Logo.png" />
+        <meta
+            name="twitter:description"
+            content="Discover the members of the Asia-Pacific Artificial Intelligence Association (AAIA) Committee collaborating with MetaSphere 2026."
+        />
+        <meta
+            name="twitter:image"
+            content="https://metasphere-2026.web.app/Assets/Logo.png"
+        />
 
         <!-- Favicon Configuration -->
         <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -116,7 +143,8 @@
                         src="Assets/003.svg"
                         alt="Conference Banner"
                         class="w-full h- object-cover"
-                    fetchpriority="high" />
+                        fetchpriority="high"
+                    />
                     <!-- Optional dark overlay for readability -->
                     <div class="absolute inset-0"></div>
                 </div>
@@ -652,31 +680,35 @@
         </div>
 
         <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Initialize Lucide Icons
-                        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
-                        if (typeof AOS !== 'undefined') { AOS.init(); }
-                        // Dropdown Menu Logic
-                        function toggleDropdown(id) {
-                            const dropdown = document.getElementById(id);
-                            const isHidden = dropdown.classList.contains("hidden");
-                            document
-                                .querySelectorAll("nav .absolute")
-                                .forEach((el) => el.classList.add("hidden"));
-                            if (isHidden) {
-                                dropdown.classList.remove("hidden");
-                            }
-                        }
-                        document.addEventListener("click", function (event) {
-                            const nav = document.querySelector("nav");
-                            if (nav && !nav.contains(event.target)) {
-                                document
-                                    .querySelectorAll("nav .absolute")
-                                    .forEach((el) => el.classList.add("hidden"));
-                            }
-                        });
-        });
-    </script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // Initialize Lucide Icons
+                if (typeof lucide !== "undefined") {
+                    lucide.createIcons();
+                }
+                if (typeof AOS !== "undefined") {
+                    AOS.init();
+                }
+                // Dropdown Menu Logic
+                function toggleDropdown(id) {
+                    const dropdown = document.getElementById(id);
+                    const isHidden = dropdown.classList.contains("hidden");
+                    document
+                        .querySelectorAll("nav .absolute")
+                        .forEach((el) => el.classList.add("hidden"));
+                    if (isHidden) {
+                        dropdown.classList.remove("hidden");
+                    }
+                }
+                document.addEventListener("click", function (event) {
+                    const nav = document.querySelector("nav");
+                    if (nav && !nav.contains(event.target)) {
+                        document
+                            .querySelectorAll("nav .absolute")
+                            .forEach((el) => el.classList.add("hidden"));
+                    }
+                });
+            });
+        </script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
         <script src="script.js"></script>

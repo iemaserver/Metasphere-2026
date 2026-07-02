@@ -3,28 +3,61 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
+
         <!-- Primary SEO Metadata -->
         <title>Keynote Speakers | MetaSphere 2026</title>
-        <meta name="description" content="Read profiles of keynote speakers at MetaSphere 2026, sharing insights on Cloud Computing, Virtualization, and the Metaverse." />
-        <meta name="keywords" content="MetaSphere 2026, Keynote Speakers, Conference Speakers, Guest Speakers, IEM, Kolkata, Cloud Computing Speakers" />
+        <meta
+            name="description"
+            content="Read profiles of keynote speakers at MetaSphere 2026, sharing insights on Cloud Computing, Virtualization, and the Metaverse."
+        />
+        <meta
+            name="keywords"
+            content="MetaSphere 2026, Keynote Speakers, Conference Speakers, Guest Speakers, IEM, Kolkata, Cloud Computing Speakers"
+        />
         <meta name="author" content="MetaSphere Conference Committee" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://metasphere-2026.web.app/Keynote_Speaker.html" />
+        <link
+            rel="canonical"
+            href="https://metasphere-2026.web.app/Keynote_Speaker.html"
+        />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://metasphere-2026.web.app/Keynote_Speaker.html" />
-        <meta property="og:title" content="Keynote Speakers | MetaSphere 2026" />
-        <meta property="og:description" content="Read profiles of keynote speakers at MetaSphere 2026, sharing insights on Cloud Computing, Virtualization, and the Metaverse." />
-        <meta property="og:image" content="https://metasphere-2026.web.app/Assets/Logo.png" />
+        <meta
+            property="og:url"
+            content="https://metasphere-2026.web.app/Keynote_Speaker.html"
+        />
+        <meta
+            property="og:title"
+            content="Keynote Speakers | MetaSphere 2026"
+        />
+        <meta
+            property="og:description"
+            content="Read profiles of keynote speakers at MetaSphere 2026, sharing insights on Cloud Computing, Virtualization, and the Metaverse."
+        />
+        <meta
+            property="og:image"
+            content="https://metasphere-2026.web.app/Assets/Logo.png"
+        />
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://metasphere-2026.web.app/Keynote_Speaker.html" />
-        <meta name="twitter:title" content="Keynote Speakers | MetaSphere 2026" />
-        <meta name="twitter:description" content="Read profiles of keynote speakers at MetaSphere 2026, sharing insights on Cloud Computing, Virtualization, and the Metaverse." />
-        <meta name="twitter:image" content="https://metasphere-2026.web.app/Assets/Logo.png" />
+        <meta
+            name="twitter:url"
+            content="https://metasphere-2026.web.app/Keynote_Speaker.html"
+        />
+        <meta
+            name="twitter:title"
+            content="Keynote Speakers | MetaSphere 2026"
+        />
+        <meta
+            name="twitter:description"
+            content="Read profiles of keynote speakers at MetaSphere 2026, sharing insights on Cloud Computing, Virtualization, and the Metaverse."
+        />
+        <meta
+            name="twitter:image"
+            content="https://metasphere-2026.web.app/Assets/Logo.png"
+        />
 
         <!-- Favicon Configuration -->
         <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -72,7 +105,8 @@
                         src="Assets/003.svg"
                         alt="Conference Banner"
                         class="w-full h- object-cover"
-                    fetchpriority="high" />
+                        fetchpriority="high"
+                    />
                     <!-- Optional dark overlay for readability -->
                     <div class="absolute inset-0"></div>
                 </div>
@@ -316,9 +350,7 @@
             </section>
 
             <div class="flex flex-col">
-                <main
-                    class="grow flex items-center justify-center p-6 md:p-12"
-                >
+                <main class="grow flex items-center justify-center p-6 md:p-12">
                     <div
                         class="w-4/5 max-w-3xl bg-white p-10 md:p-16 rounded-2xl shadow-md text-center border border-gray-100"
                         data-aos="zoom-out"
@@ -467,31 +499,35 @@
         </div>
 
         <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Initialize Lucide Icons
-                        if (typeof lucide !== 'undefined') { lucide.createIcons(); }
-                        if (typeof AOS !== 'undefined') { AOS.init(); }
-                        // Dropdown Menu Logic
-                        function toggleDropdown(id) {
-                            const dropdown = document.getElementById(id);
-                            const isHidden = dropdown.classList.contains("hidden");
-                            document
-                                .querySelectorAll("nav .absolute")
-                                .forEach((el) => el.classList.add("hidden"));
-                            if (isHidden) {
-                                dropdown.classList.remove("hidden");
-                            }
-                        }
-                        document.addEventListener("click", function (event) {
-                            const nav = document.querySelector("nav");
-                            if (nav && !nav.contains(event.target)) {
-                                document
-                                    .querySelectorAll("nav .absolute")
-                                    .forEach((el) => el.classList.add("hidden"));
-                            }
-                        });
-        });
-    </script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // Initialize Lucide Icons
+                if (typeof lucide !== "undefined") {
+                    lucide.createIcons();
+                }
+                if (typeof AOS !== "undefined") {
+                    AOS.init();
+                }
+                // Dropdown Menu Logic
+                function toggleDropdown(id) {
+                    const dropdown = document.getElementById(id);
+                    const isHidden = dropdown.classList.contains("hidden");
+                    document
+                        .querySelectorAll("nav .absolute")
+                        .forEach((el) => el.classList.add("hidden"));
+                    if (isHidden) {
+                        dropdown.classList.remove("hidden");
+                    }
+                }
+                document.addEventListener("click", function (event) {
+                    const nav = document.querySelector("nav");
+                    if (nav && !nav.contains(event.target)) {
+                        document
+                            .querySelectorAll("nav .absolute")
+                            .forEach((el) => el.classList.add("hidden"));
+                    }
+                });
+            });
+        </script>
         <script src="script.js"></script>
     </body>
 </html>
